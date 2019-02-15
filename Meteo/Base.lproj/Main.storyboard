@@ -19,17 +19,17 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="RhV-M5-8xX"/>
+                        <segue destination="Um6-lv-USy" kind="relationship" relationship="rootViewController" id="edP-46-1Td"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7TU-Gw-lFS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-793" y="133"/>
+            <point key="canvasLocation" x="-758" y="823"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Boilerplate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Meteo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,10 +59,90 @@
             </objects>
             <point key="canvasLocation" x="44" y="133"/>
         </scene>
+        <!--Home View Controller-->
+        <scene sceneID="iVR-4B-yJe">
+            <objects>
+                <viewController id="Um6-lv-USy" customClass="HomeViewController" customModule="Meteo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qA7-bp-fGa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gch-Vp-8kL">
+                                <rect key="frame" x="0.0" y="134" width="375" height="533"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q38-8y-E5C">
+                                <rect key="frame" x="0.0" y="64" width="375" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jqz-0P-LVl">
+                                        <rect key="frame" x="8" y="19.5" width="275" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqF-pN-DLv">
+                                        <rect key="frame" x="323" y="8" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="rqF-pN-DLv" secondAttribute="height" multiplier="1:1" id="bD4-So-5cM"/>
+                                            <constraint firstAttribute="height" constant="44" id="dxy-VY-qpO"/>
+                                        </constraints>
+                                        <state key="normal" title="?"/>
+                                        <connections>
+                                            <action selector="searchHandler:" destination="Um6-lv-USy" eventType="touchUpInside" id="OFX-aH-jwV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="rqF-pN-DLv" firstAttribute="leading" secondItem="Jqz-0P-LVl" secondAttribute="trailing" constant="40" id="E8p-6L-cpz"/>
+                                    <constraint firstItem="rqF-pN-DLv" firstAttribute="centerY" secondItem="q38-8y-E5C" secondAttribute="centerY" id="UDI-Ow-EaO"/>
+                                    <constraint firstAttribute="height" constant="60" id="Y2Y-zr-rrf"/>
+                                    <constraint firstItem="Jqz-0P-LVl" firstAttribute="centerY" secondItem="q38-8y-E5C" secondAttribute="centerY" id="Y3s-r7-Xzb"/>
+                                    <constraint firstAttribute="trailing" secondItem="rqF-pN-DLv" secondAttribute="trailing" constant="8" id="cF5-Ib-oAX"/>
+                                    <constraint firstItem="Jqz-0P-LVl" firstAttribute="leading" secondItem="q38-8y-E5C" secondAttribute="leading" constant="8" id="cvd-Dg-Ooo"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gch-Vp-8kL" firstAttribute="leading" secondItem="qsI-5F-TYe" secondAttribute="leading" id="MjW-SA-t1x"/>
+                            <constraint firstItem="gch-Vp-8kL" firstAttribute="top" secondItem="q38-8y-E5C" secondAttribute="bottom" constant="10" id="bru-lB-WG9"/>
+                            <constraint firstItem="q38-8y-E5C" firstAttribute="top" secondItem="qsI-5F-TYe" secondAttribute="top" id="cHM-bn-0IB"/>
+                            <constraint firstItem="gch-Vp-8kL" firstAttribute="bottom" secondItem="qsI-5F-TYe" secondAttribute="bottom" id="ctj-hO-dIQ"/>
+                            <constraint firstItem="q38-8y-E5C" firstAttribute="trailing" secondItem="qsI-5F-TYe" secondAttribute="trailing" id="jq7-xo-rT9"/>
+                            <constraint firstItem="q38-8y-E5C" firstAttribute="leading" secondItem="qsI-5F-TYe" secondAttribute="leading" id="rya-W6-Rc4"/>
+                            <constraint firstItem="gch-Vp-8kL" firstAttribute="trailing" secondItem="qsI-5F-TYe" secondAttribute="trailing" id="ynQ-7b-TyF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qsI-5F-TYe"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wOt-Jm-T43"/>
+                    <connections>
+                        <outlet property="tableView" destination="gch-Vp-8kL" id="XTz-gP-nP4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UtY-FN-94Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="44" y="821.73913043478262"/>
+        </scene>
+        <!--Search Location View Controller-->
+        <scene sceneID="a3D-hj-ESZ">
+            <objects>
+                <viewController storyboardIdentifier="searchVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="L1Z-1M-edD" customClass="SearchLocationViewController" customModule="Meteo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FvH-uo-jQE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="EZN-2o-qSI"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bQt-qP-ahy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="44" y="1552"/>
+        </scene>
         <!--Room View Controller-->
         <scene sceneID="A4D-Ok-Usx">
             <objects>
-                <viewController storyboardIdentifier="roomVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="j1a-pA-bvC" customClass="RoomViewController" customModule="Boilerplate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="roomVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="j1a-pA-bvC" customClass="RoomViewController" customModule="Meteo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6ti-y3-Zx1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -77,7 +157,7 @@
         <!--Second View Controller-->
         <scene sceneID="O7u-HE-qDi">
             <objects>
-                <viewController storyboardIdentifier="secondVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iYI-ob-Wna" customClass="SecondViewController" customModule="Boilerplate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="secondVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iYI-ob-Wna" customClass="SecondViewController" customModule="Meteo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DdG-2q-XH9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -114,7 +194,7 @@
         <!--Today View Controller-->
         <scene sceneID="0Kx-mZ-SE6">
             <objects>
-                <viewController storyboardIdentifier="todayVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0s8-Ih-ghn" customClass="TodayViewController" customModule="Boilerplate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="todayVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0s8-Ih-ghn" customClass="TodayViewController" customModule="Meteo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jR7-TU-LZV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -137,7 +217,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </view>
                                     </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="customAppPreviewCell" id="c68-to-nfl" customClass="AppPreviewCollectionViewCell" customModule="Boilerplate" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="customAppPreviewCell" id="c68-to-nfl" customClass="AppPreviewCollectionViewCell" customModule="Meteo" customModuleProvider="target">
                                         <rect key="frame" x="195" y="10" width="170" height="170"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -220,7 +300,7 @@
         <!--Detail Today App View Controller-->
         <scene sceneID="IS2-1N-vTh">
             <objects>
-                <viewController storyboardIdentifier="detailTodayAppVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CWP-4x-vik" customClass="DetailTodayAppViewController" customModule="Boilerplate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="detailTodayAppVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CWP-4x-vik" customClass="DetailTodayAppViewController" customModule="Meteo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5JU-G9-JKE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -294,6 +374,21 @@ Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H4b-p6-jKQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="44" y="-597"/>
+        </scene>
+        <!--Meteo Details View Controller-->
+        <scene sceneID="HUj-b6-xEw">
+            <objects>
+                <viewController id="CZ5-6E-5cW" customClass="MeteoDetailsViewController" customModule="Meteo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7BY-Qj-EQA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="OGi-IS-xCy"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x1F-1j-iTn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="825" y="822"/>
         </scene>
     </scenes>
 </document>

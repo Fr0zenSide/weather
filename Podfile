@@ -1,11 +1,11 @@
 # Uncomment the next line to define a global platform for your project
 platform :ios, '9.0'
 
-target 'Boilerplate' do
+target 'Meteo' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for Boilerplate
+  # Pods for Meteo
   
 
   ############# About Frameworks & Achitectures #############
@@ -17,13 +17,13 @@ target 'Boilerplate' do
   pod 'RxCocoa', '~> 4.4.0'
 
   # RxFlow is a navigation framework for iOS applications, based on a Reactive Coordinator pattern.
-  pod 'RxFlow', '~> 1.6.2'
+#  pod 'RxFlow', '~> 1.6.2'
 
   # Simple, Extensable, Flexable Validation Checker
-  pod 'RxValidator', '~> 0.0.9'
+#  pod 'RxValidator', '~> 0.0.9'
 
   # Reactive Keyboard in iOS
-  pod 'RxKeyboard', '~> 0.9.0'
+#  pod 'RxKeyboard', '~> 0.9.0'
 
   
   ############# About Network #############
@@ -32,10 +32,10 @@ target 'Boilerplate' do
   pod 'Moya/RxSwift', '~> 12.0.1'
 
   # A conforming WebSocket RFC 6455 client library in Swift.
-  pod 'Starscream', '~> 3.0.6'
+#  pod 'Starscream', '~> 3.0.6'
 
   # A lightweight extension to subscribe Starscream websocket events with RxSwift.
-  pod 'RxStarscream', '~> 0.9' 
+#  pod 'RxStarscream', '~> 0.9' 
 
   # A lightweight and pure Swift implemented library for downloading and cacheing image from the web.
   pod 'Kingfisher', '~> 4.10.1'
@@ -62,7 +62,7 @@ target 'Boilerplate' do
   # pod 'lottie-ios', '~> 2.5.2'
 
   # Theme management based on RxCocoa
-  pod 'RxTheme', '~> 3.2.1'
+#  pod 'RxTheme', '~> 3.2.1'
 
 
   ############# About Tools - Debug - CI #############
@@ -81,12 +81,12 @@ target 'Boilerplate' do
   pod 'Crashlytics', '~> 3.12.0'  
 
 
-  target 'BoilerplateTests' do
+  target 'MeteoTests' do
     inherit! :search_paths
     # Pods for testing
   end
 
-  target 'BoilerplateUITests' do
+  target 'MeteoUITests' do
     inherit! :search_paths
     # Pods for testing
   end

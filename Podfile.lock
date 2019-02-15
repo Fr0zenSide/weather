@@ -1,7 +1,7 @@
 PODS:
   - Alamofire (4.8.1)
-  - CocoaLumberjack/Core (3.5.0)
-  - CocoaLumberjack/Swift (3.5.0):
+  - CocoaLumberjack/Core (3.5.1)
+  - CocoaLumberjack/Swift (3.5.1):
     - CocoaLumberjack/Core
   - Crashlytics (3.12.0):
     - Fabric (~> 1.9.0)
@@ -26,7 +26,7 @@ PODS:
     - FirebaseCore (~> 5.1)
     - GoogleUtilities/Environment (~> 5.3)
     - GoogleUtilities/UserDefaults (~> 5.3)
-  - FontAwesome.swift (1.4.8)
+  - FontAwesome.swift (1.4.9)
   - GoogleAppMeasurement (5.4.0):
     - GoogleUtilities/AppDelegateSwizzler (~> 5.2)
     - GoogleUtilities/MethodSwizzler (~> 5.2)
@@ -69,19 +69,15 @@ PODS:
   - NVActivityIndicatorView/Presenter (4.4.1)
   - PMAlertController (3.5.0)
   - Result (4.1.0)
-  - RxAtomic (4.4.0)
-  - RxCocoa (4.4.0):
+  - RxAtomic (4.4.1)
+  - RxCocoa (4.4.1):
     - RxSwift (~> 4.0)
-  - RxFlow (1.6.2):
-    - RxCocoa (>= 4.3.0)
-    - RxSwift (>= 4.3.0)
-  - RxStarscream (0.9):
-    - RxCocoa (~> 4.0)
-    - RxSwift (~> 4.0)
-    - Starscream (~> 3.0)
-  - RxSwift (4.4.0):
+  - RxKingfisher (0.3.1):
+    - Kingfisher (~> 4)
+    - RxCocoa (~> 4.3)
+    - RxSwift (~> 4.3)
+  - RxSwift (4.4.1):
     - RxAtomic (~> 4.4)
-  - Starscream (3.0.6)
 
 DEPENDENCIES:
   - CocoaLumberjack/Swift (~> 3.5.0)
@@ -95,10 +91,8 @@ DEPENDENCIES:
   - NVActivityIndicatorView (~> 4.4.1)
   - PMAlertController (~> 3.5.0)
   - RxCocoa (~> 4.4.0)
-  - RxFlow (~> 1.6.2)
-  - RxStarscream (~> 0.9)
+  - RxKingfisher (~> 0.3.1)
   - RxSwift (~> 4.4.0)
-  - Starscream (~> 3.0.6)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -122,21 +116,19 @@ SPEC REPOS:
     - Result
     - RxAtomic
     - RxCocoa
-    - RxFlow
-    - RxStarscream
+    - RxKingfisher
     - RxSwift
-    - Starscream
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
-  CocoaLumberjack: cffaa70a9336515228178e3669b71bd49d343850
+  CocoaLumberjack: 2101f8a5508197a305e737d16c5c2e9e2157628c
   Crashlytics: 07fb167b1694128c1c9a5a5cc319b0e9c3ca0933
   Fabric: f988e33c97f08930a413e08123064d2e5f68d655
   Firebase: 8bb9268bff82374f2cbaaabb143e725743c316ae
   FirebaseAnalytics: c06f9d70577d79074214700a71fd5d39de5550fb
   FirebaseCore: 35747502d9e8c6ee217385ad04446c7c2aaf9c5c
   FirebaseInstanceID: e2fa4cb35ef5558c200f7f0ad8a53e212215f93e
-  FontAwesome.swift: fb8637bffb9a588c7e8c753c084565b27b20a39d
+  FontAwesome.swift: 7f831846e85b93d32ded5d86983804b749921760
   GoogleAppMeasurement: 98b71f5e04142793729a5ef23e5b96651ff4b70f
   GoogleUtilities: 111a012f4c3a29c9e7c954c082fafd6ee3c999c0
   KeychainAccess: b3816fddcf28aa29d94b10ec305cd52be14c472b
@@ -146,13 +138,11 @@ SPEC CHECKSUMS:
   NVActivityIndicatorView: f0a6b0ed2973d9544da268f4eb76696f0a9577b0
   PMAlertController: 06dab8160066fc4ce991c880e3722cd403e2926a
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
-  RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
-  RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
-  RxFlow: 2460b8f1d546a7536d3b259536357301030a4140
-  RxStarscream: 8f3a9d2e6e03dbc136f29b1db9874fc3478c991b
-  RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
-  Starscream: ef3ece99d765eeccb67de105bfa143f929026cf5
+  RxAtomic: f8d6adc1ccb87a767811269e4875887bc74dbf19
+  RxCocoa: 2f35a76bf8887872e28a1914112395b11b8e0e64
+  RxKingfisher: d79612e7a6cab0b67d6e9b63fc1572fccc825afb
+  RxSwift: 92fcf68dfef21f3e2ab1965363d9e7b3d787597e
 
-PODFILE CHECKSUM: 41f4e60fc082bd688e02945bc140ed9e02521dde
+PODFILE CHECKSUM: 63a82e80817c2ab02ec61472297519ee1b44957d
 
 COCOAPODS: 1.5.3
