@@ -33,8 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         // Setup Keychain
-        let keychain = Keychain(service: "me.jeoffrey.boilerplate")
-            .label("jeoffrey.me (Boilerplate)")
+        let keychain = Keychain(service: "me.jeoffrey.meteo")
+            .label("jeoffrey.me (Meteo)")
             .synchronizable(true)
         
         // Setup Firebase
@@ -45,13 +45,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Fabric.with([Crashlytics.self])
         
         // Setup api Tokens in keychain
-        let apptweakToken = ""
-        if apptweakToken == "" && (keychain["apptweakToken"] == nil || keychain["apptweakToken"] == "") {
+        let openweathermapToken = ""
+        if openweathermapToken == "" && (keychain["openweathermapToken"] == nil || keychain["openweathermapToken"] == "") {
             fatalError("Error! You need to add a tweak token for this app worked")
-        } else if apptweakToken != "" {
-            keychain["apptweakToken"] = apptweakToken
+        } else if openweathermapToken != "" {
+            keychain["openweathermapToken"] = openweathermapToken
         }
-        if let token = keychain["apptweakToken"] { print("My app tweek token: \(token)") }
+        if let token = keychain["openweathermapToken"] { print("My weather token: \(token)") }
         
         return true
     }

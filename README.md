@@ -1,7 +1,13 @@
-# My Boilerplate
+# Meteo app
 ------------
 
-Make a default app to create a project with a best practice and a Kuzzle connector
+Make a litte weather app with Open Weather Map api.
+
+Setup porject
+--------
+
+You need to add a weather api token in AppDelegate file: `let openweathermapToken = ""`
+
 
    
    
