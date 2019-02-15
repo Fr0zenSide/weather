@@ -14,6 +14,7 @@
 		8016FE1D2216B61A009AABC4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8016FE1C2216B61A009AABC4 /* HomeViewController.swift */; };
 		8016FE1F2216B642009AABC4 /* MeteoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8016FE1E2216B642009AABC4 /* MeteoDetailsViewController.swift */; };
 		8016FE212216B655009AABC4 /* SearchLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8016FE202216B655009AABC4 /* SearchLocationViewController.swift */; };
+		8016FE232216CA1A009AABC4 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8016FE222216CA1A009AABC4 /* WeatherService.swift */; };
 		801E603A21C3EA0800935339 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801E603921C3EA0800935339 /* AppDelegate.swift */; };
 		801E603C21C3EA0800935339 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801E603B21C3EA0800935339 /* ViewController.swift */; };
 		801E604F21C3EA0A00935339 /* MeteoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801E604E21C3EA0A00935339 /* MeteoTests.swift */; };
@@ -25,7 +26,6 @@
 		8046BD7621F63CA9009AA8C9 /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8046BD7521F63CA9009AA8C9 /* RoomViewController.swift */; };
 		8046BD8921F64CDF009AA8C9 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8046BD8821F64CDF009AA8C9 /* UIColor.swift */; };
 		8046BD8B21F64D19009AA8C9 /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8046BD8A21F64D19009AA8C9 /* CGFloat.swift */; };
-		8064D14C22019C0D00480DCF /* KuzzleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8064D14B22019C0C00480DCF /* KuzzleService.swift */; };
 		807C3B1621FB19470066A8E0 /* AppPreviewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807C3B1521FB19470066A8E0 /* AppPreviewCollectionViewCell.swift */; };
 		807C3B1921FB19550066A8E0 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807C3B1721FB19550066A8E0 /* TodayViewController.swift */; };
 		807C3B1A21FB19550066A8E0 /* DetailTodayAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807C3B1821FB19550066A8E0 /* DetailTodayAppViewController.swift */; };
@@ -79,6 +79,7 @@
 		8016FE1C2216B61A009AABC4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8016FE1E2216B642009AABC4 /* MeteoDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteoDetailsViewController.swift; sourceTree = "<group>"; };
 		8016FE202216B655009AABC4 /* SearchLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocationViewController.swift; sourceTree = "<group>"; };
+		8016FE222216CA1A009AABC4 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		801E603621C3EA0800935339 /* Meteo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meteo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		801E603921C3EA0800935339 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		801E603B21C3EA0800935339 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -96,7 +97,6 @@
 		8046BD7521F63CA9009AA8C9 /* RoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
 		8046BD8821F64CDF009AA8C9 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		8046BD8A21F64D19009AA8C9 /* CGFloat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloat.swift; sourceTree = "<group>"; };
-		8064D14B22019C0C00480DCF /* KuzzleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KuzzleService.swift; sourceTree = "<group>"; };
 		807C3B1521FB19470066A8E0 /* AppPreviewCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppPreviewCollectionViewCell.swift; sourceTree = "<group>"; };
 		807C3B1721FB19550066A8E0 /* TodayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		807C3B1821FB19550066A8E0 /* DetailTodayAppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTodayAppViewController.swift; sourceTree = "<group>"; };
@@ -282,7 +282,7 @@
 		8046BD7B21F63E23009AA8C9 /* Networks */ = {
 			isa = PBXGroup;
 			children = (
-				8064D14B22019C0C00480DCF /* KuzzleService.swift */,
+				8016FE222216CA1A009AABC4 /* WeatherService.swift */,
 				807C3B3621FB25E30066A8E0 /* NetworkEngine.swift */,
 			);
 			path = Networks;
@@ -668,7 +668,6 @@
 				8046BD8B21F64D19009AA8C9 /* CGFloat.swift in Sources */,
 				8016FE1F2216B642009AABC4 /* MeteoDetailsViewController.swift in Sources */,
 				8046BD6F21F5FBA7009AA8C9 /* SecondViewController.swift in Sources */,
-				8064D14C22019C0D00480DCF /* KuzzleService.swift in Sources */,
 				807C3B2021FB197D0066A8E0 /* UIView.swift in Sources */,
 				807C3B3521FB1FAA0066A8E0 /* AbstractModel.swift in Sources */,
 				807C3B2C21FB1A020066A8E0 /* FlipPresentAnimationController.swift in Sources */,
@@ -682,6 +681,7 @@
 				807C3B2D21FB1A020066A8E0 /* FlipDismissAnimationController.swift in Sources */,
 				807C3B3321FB1FAA0066A8E0 /* Apps.swift in Sources */,
 				807C3B3421FB1FAA0066A8E0 /* App.swift in Sources */,
+				8016FE232216CA1A009AABC4 /* WeatherService.swift in Sources */,
 				807C3B1C21FB19680066A8E0 /* Constants.swift in Sources */,
 				807C3B2E21FB1A020066A8E0 /* ZoomPresentAnimationController.swift in Sources */,
 				807C3B1921FB19550066A8E0 /* TodayViewController.swift in Sources */,

@@ -110,9 +110,9 @@ class NetworkEngine {
             fatalError("Error! I can create an url with this context.")
         }
         
-        var request = URLRequest(url: url)
+        let request = URLRequest(url: url)
         // todo: Need to find an other way to use header in the app
-        request.addValue(Constants.apptweakToken, forHTTPHeaderField: "X-Apptweak-Key")
+        // request.addValue(Constants.apptweakToken, forHTTPHeaderField: "X-Apptweak-Key")
         let session = URLSession.shared
         let task = session.dataTask(with: request, completionHandler: {(data, response, error) in
             if error != nil {

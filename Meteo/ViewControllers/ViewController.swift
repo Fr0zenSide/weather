@@ -89,33 +89,33 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         DDLogDebug("World 🎉")
-        
-        let provider = MoyaProvider<KuzzleService>()
-        provider.request(.hello) { (result) in
-            var statusCode: Int
-            switch result {
-            case let .success(response):
-                // Convert JSON String to Model
-                let JSONString = String(data: response.data, encoding: .utf8)
-                statusCode = response.statusCode
-                DDLogDebug("data: \(JSONString!)")
-            case let .failure(error):
-                DDLogDebug("Failure request :( \(error.localizedDescription)")
-                statusCode = (error.response?.statusCode != nil ? (error.response?.statusCode)! : 418)
-            }
-            DDLogDebug("Request on server(\(KuzzleService.hello.path)) with status: \(statusCode)")
-        }
-        
-        provider.rx.request(.hello).subscribe { event in
-            switch event {
-            case let .success(response):
-                DDLogDebug("Rx response: \(response)")
-                let JSONString = String(data: response.data, encoding: .utf8)
-                DDLogDebug("Rx data: \(JSONString!)")
-            case let .error(error):
-                DDLogDebug("Rx error: \(error)")
-            }
-        }
+//        
+//        let provider = MoyaProvider<KuzzleService>()
+//        provider.request(.hello) { (result) in
+//            var statusCode: Int
+//            switch result {
+//            case let .success(response):
+//                // Convert JSON String to Model
+//                let JSONString = String(data: response.data, encoding: .utf8)
+//                statusCode = response.statusCode
+//                DDLogDebug("data: \(JSONString!)")
+//            case let .failure(error):
+//                DDLogDebug("Failure request :( \(error.localizedDescription)")
+//                statusCode = (error.response?.statusCode != nil ? (error.response?.statusCode)! : 418)
+//            }
+//            DDLogDebug("Request on server(\(KuzzleService.hello.path)) with status: \(statusCode)")
+//        }
+//        
+//        provider.rx.request(.hello).subscribe { event in
+//            switch event {
+//            case let .success(response):
+//                DDLogDebug("Rx response: \(response)")
+//                let JSONString = String(data: response.data, encoding: .utf8)
+//                DDLogDebug("Rx data: \(JSONString!)")
+//            case let .error(error):
+//                DDLogDebug("Rx error: \(error)")
+//            }
+//        }
         
     }
 

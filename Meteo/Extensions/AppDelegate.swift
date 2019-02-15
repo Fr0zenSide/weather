@@ -45,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Fabric.with([Crashlytics.self])
         
         // Setup api Tokens in keychain
-        let openweathermapToken = ""
+        let openweathermapToken = "7dde3cbb5332a21f3d85cb27efc242c1"
         if openweathermapToken == "" && (keychain["openweathermapToken"] == nil || keychain["openweathermapToken"] == "") {
             fatalError("Error! You need to add a tweak token for this app worked")
         } else if openweathermapToken != "" {
