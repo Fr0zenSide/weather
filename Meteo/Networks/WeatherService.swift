@@ -18,7 +18,7 @@ extension WeatherService: TargetType {
     var path: String {
         switch self {
         case .hello:
-            return "/"
+            return "/weather"
         }
     }
     
@@ -39,6 +39,7 @@ extension WeatherService: TargetType {
              Latitude    45.81161
              Longitude    1.21601
              */
+            print(Constants.openweathermapToken)
              return ["APPID": Constants.openweathermapToken, "lat": 45, "lon": 1]
         }
     }
@@ -49,8 +50,11 @@ extension WeatherService: TargetType {
     
     var task: Task {
         switch self {
-        case .hello: // Send no parameters
-            return .requestPlain
+        case .hello:
+            print(Constants.openweathermapToken)
+            return .requestParameters(parameters: ["APPID": Constants.openweathermapToken, "lat": 45, "lon": 1], encoding: URLEncoding.queryString)
+//        case .hello: // Send no parameters
+//            return .requestPlain
         }
     }
     

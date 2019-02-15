@@ -54,6 +54,18 @@ class HomeViewController: UIViewController {
             DDLogDebug("Request on server(\(WeatherService.hello.path)) with status: \(statusCode)")
         }
         
+        provider.rx.request(.hello).map(Weather.self).subscribe { event in
+            switch event {
+            case let .success(response):
+//                DDLogDebug("Rx response: \(response)")
+                DDLogDebug("Rx weather: \(response)")
+                DDLogDebug("\n\n-------------\n\(response.dictionary())\n-------------\n\n")
+//                let JSONString = String(data: response.data, encoding: .utf8)
+//                DDLogDebug("Rx data: \(JSONString!)")
+            case let .error(error):
+                DDLogDebug("Rx error: \(error)")
+            }
+        }
         provider.rx.request(.hello).subscribe { event in
             switch event {
             case let .success(response):
