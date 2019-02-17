@@ -51,6 +51,7 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (5.3.7):
     - GoogleUtilities/Logger
+  - Hero (1.4.0)
   - KeychainAccess (3.1.2)
   - Kingfisher (4.10.1)
   - Moya/Core (12.0.1):
@@ -85,6 +86,7 @@ DEPENDENCIES:
   - Fabric (~> 1.9.0)
   - Firebase/Core (~> 5.15.0)
   - FontAwesome.swift (~> 1.4.5)
+  - Hero (~> 1.4.0)
   - KeychainAccess (~> 3.1.2)
   - Kingfisher (~> 4.10.1)
   - Moya/RxSwift (~> 12.0.1)
@@ -107,6 +109,7 @@ SPEC REPOS:
     - FontAwesome.swift
     - GoogleAppMeasurement
     - GoogleUtilities
+    - Hero
     - KeychainAccess
     - Kingfisher
     - Moya
@@ -131,6 +134,7 @@ SPEC CHECKSUMS:
   FontAwesome.swift: 7f831846e85b93d32ded5d86983804b749921760
   GoogleAppMeasurement: 98b71f5e04142793729a5ef23e5b96651ff4b70f
   GoogleUtilities: 111a012f4c3a29c9e7c954c082fafd6ee3c999c0
+  Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
   KeychainAccess: b3816fddcf28aa29d94b10ec305cd52be14c472b
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
@@ -143,6 +147,6 @@ SPEC CHECKSUMS:
   RxKingfisher: d79612e7a6cab0b67d6e9b63fc1572fccc825afb
   RxSwift: 92fcf68dfef21f3e2ab1965363d9e7b3d787597e
 
-PODFILE CHECKSUM: 63a82e80817c2ab02ec61472297519ee1b44957d
+PODFILE CHECKSUM: 4c28696d97d77e8864a55dfc819fad4403c4b875
 
 COCOAPODS: 1.5.3

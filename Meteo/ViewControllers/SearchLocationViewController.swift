@@ -16,6 +16,12 @@ class SearchLocationViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesEnded(touches, with: event)
+        
+        self.dismiss(animated: true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation

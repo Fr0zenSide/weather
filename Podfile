@@ -58,6 +58,9 @@ target 'Meteo' do
   # Use Font Awesome in your Swift projects
   pod 'FontAwesome.swift', '~> 1.4.5'
 
+  # Elegant transition library for iOS
+  pod 'Hero', '~> 1.4.0'
+
   # Used to natively render vector animations exported from After Effects.
   # pod 'lottie-ios', '~> 2.5.2'
 

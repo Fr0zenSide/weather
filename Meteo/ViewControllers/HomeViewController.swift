@@ -42,7 +42,7 @@ class HomeViewController: UIViewController {
         let memoryCapacity = 200 * 1024 * 1024 // 200 MB
         let diskCapacity = 50 * 1024 * 1024 // 50 MB
         let cache = URLCache(memoryCapacity: memoryCapacity, diskCapacity: diskCapacity, diskPath: NSTemporaryDirectory())
-        let urlSessionConf = URLSessionConfiguration.background(withIdentifier: "me.jeoffrey.Meteo")
+        let urlSessionConf = URLSessionConfiguration.background(withIdentifier: "\(Constants.bundleIdentifier).weather-cache")
         
         let cachePlugin = NetworkDataCachingPlugin(configuration: urlSessionConf, with: cache)
         let provider = MoyaProvider<WeatherService>(plugins: [cachePlugin])
