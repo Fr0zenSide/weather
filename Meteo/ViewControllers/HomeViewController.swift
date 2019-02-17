@@ -38,7 +38,14 @@ class HomeViewController: UIViewController {
         
         DDLogDebug("Hi 🎉")
         
-        let provider = MoyaProvider<WeatherService>()
+        // Setup the cache configuration for network engine
+        let memoryCapacity = 200 * 1024 * 1024 // 200 MB
+        let diskCapacity = 50 * 1024 * 1024 // 50 MB
+        let cache = URLCache(memoryCapacity: memoryCapacity, diskCapacity: diskCapacity, diskPath: NSTemporaryDirectory())
+        let urlSessionConf = URLSessionConfiguration.background(withIdentifier: "me.jeoffrey.Meteo")
+        
+        let cachePlugin = NetworkDataCachingPlugin(configuration: urlSessionConf, with: cache)
+        let provider = MoyaProvider<WeatherService>(plugins: [cachePlugin])
         provider.request(.hello) { (result) in
             var statusCode: Int
             switch result {
@@ -59,9 +66,7 @@ class HomeViewController: UIViewController {
             case let .success(response):
 //                DDLogDebug("Rx response: \(response)")
                 DDLogDebug("Rx weather: \(response)")
-                DDLogDebug("\n\n-------------\n\(response.dictionary())\n-------------\n\n")
-//                let JSONString = String(data: response.data, encoding: .utf8)
-//                DDLogDebug("Rx data: \(JSONString!)")
+                DDLogDebug("\n\n-------------\n\(String(describing: response.dictionary()))\n-------------\n\n")
             case let .error(error):
                 DDLogDebug("Rx error: \(error)")
             }

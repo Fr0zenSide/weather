@@ -16,7 +16,8 @@
 		8016FE212216B655009AABC4 /* SearchLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8016FE202216B655009AABC4 /* SearchLocationViewController.swift */; };
 		8016FE232216CA1A009AABC4 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8016FE222216CA1A009AABC4 /* WeatherService.swift */; };
 		8016FE2522172887009AABC4 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8016FE2422172887009AABC4 /* Weather.swift */; };
-		801E603A21C3EA0800935339 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801E603921C3EA0800935339 /* AppDelegate.swift */; };
+		8016FE2722199360009AABC4 /* NetworkDataCachingPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8016FE2622199360009AABC4 /* NetworkDataCachingPlugin.swift */; };
+		8016FE2922199E0C009AABC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8016FE2822199E0B009AABC4 /* AppDelegate.swift */; };
 		801E603C21C3EA0800935339 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801E603B21C3EA0800935339 /* ViewController.swift */; };
 		801E604F21C3EA0A00935339 /* MeteoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801E604E21C3EA0A00935339 /* MeteoTests.swift */; };
 		801E605A21C3EA0A00935339 /* MeteoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801E605921C3EA0A00935339 /* MeteoUITests.swift */; };
@@ -82,8 +83,9 @@
 		8016FE202216B655009AABC4 /* SearchLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocationViewController.swift; sourceTree = "<group>"; };
 		8016FE222216CA1A009AABC4 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		8016FE2422172887009AABC4 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		8016FE2622199360009AABC4 /* NetworkDataCachingPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataCachingPlugin.swift; sourceTree = "<group>"; };
+		8016FE2822199E0B009AABC4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Meteo/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		801E603621C3EA0800935339 /* Meteo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meteo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		801E603921C3EA0800935339 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		801E603B21C3EA0800935339 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		801E604A21C3EA0A00935339 /* MeteoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeteoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		801E604E21C3EA0A00935339 /* MeteoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteoTests.swift; sourceTree = "<group>"; };
@@ -286,6 +288,7 @@
 			children = (
 				8016FE222216CA1A009AABC4 /* WeatherService.swift */,
 				807C3B3621FB25E30066A8E0 /* NetworkEngine.swift */,
+				8016FE2622199360009AABC4 /* NetworkDataCachingPlugin.swift */,
 			);
 			path = Networks;
 			sourceTree = "<group>";
@@ -323,7 +326,7 @@
 		8046BD8021F63E94009AA8C9 /* Project Files */ = {
 			isa = PBXGroup;
 			children = (
-				801E603921C3EA0800935339 /* AppDelegate.swift */,
+				8016FE2822199E0B009AABC4 /* AppDelegate.swift */,
 				8016FE182216B2CD009AABC4 /* LaunchScreen.storyboard */,
 				8016FE162216B2CD009AABC4 /* Main.storyboard */,
 				803B01062216A03D0037397F /* Assets.xcassets */,
@@ -676,13 +679,13 @@
 				807C3B2C21FB1A020066A8E0 /* FlipPresentAnimationController.swift in Sources */,
 				801E603C21C3EA0800935339 /* ViewController.swift in Sources */,
 				807C3B2121FB197D0066A8E0 /* UIImageView.swift in Sources */,
-				801E603A21C3EA0800935339 /* AppDelegate.swift in Sources */,
 				80261A4022016F0700F8E116 /* CocoaLumberjackCustomFormatter.swift in Sources */,
 				807C3B1A21FB19550066A8E0 /* DetailTodayAppViewController.swift in Sources */,
 				807C3B2221FB197D0066A8E0 /* Serializable.swift in Sources */,
 				807C3B2521FB19CF0066A8E0 /* AnimationHelper.swift in Sources */,
 				807C3B2D21FB1A020066A8E0 /* FlipDismissAnimationController.swift in Sources */,
 				807C3B3321FB1FAA0066A8E0 /* Apps.swift in Sources */,
+				8016FE2922199E0C009AABC4 /* AppDelegate.swift in Sources */,
 				807C3B3421FB1FAA0066A8E0 /* App.swift in Sources */,
 				8016FE232216CA1A009AABC4 /* WeatherService.swift in Sources */,
 				8016FE2522172887009AABC4 /* Weather.swift in Sources */,
@@ -693,6 +696,7 @@
 				8016FE212216B655009AABC4 /* SearchLocationViewController.swift in Sources */,
 				807C3B1621FB19470066A8E0 /* AppPreviewCollectionViewCell.swift in Sources */,
 				8046BD8921F64CDF009AA8C9 /* UIColor.swift in Sources */,
+				8016FE2722199360009AABC4 /* NetworkDataCachingPlugin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

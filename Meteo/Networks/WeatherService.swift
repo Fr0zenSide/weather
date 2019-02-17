@@ -29,18 +29,12 @@ extension WeatherService: TargetType {
         }
     }
     
-    var parameters: [String: Any]? {
+    var parameters: [String: Any] {
         switch self {
-//        case .serverDetails, .content, .listInstallationDevices, .detailRFIDTag(_), .downloadMoyaWebContent, .translations:
-//            return nil
         case .hello:
-            /*
-             // For try
-             Latitude    45.81161
-             Longitude    1.21601
-             */
-            print(Constants.openweathermapToken)
              return ["APPID": Constants.openweathermapToken, "lat": 45, "lon": 1]
+        default:
+            return [String: Any]()
         }
     }
     
@@ -51,10 +45,9 @@ extension WeatherService: TargetType {
     var task: Task {
         switch self {
         case .hello:
-            print(Constants.openweathermapToken)
-            return .requestParameters(parameters: ["APPID": Constants.openweathermapToken, "lat": 45, "lon": 1], encoding: URLEncoding.queryString)
-//        case .hello: // Send no parameters
-//            return .requestPlain
+            return .requestParameters(parameters: parameters, encoding: parameterEncoding)
+        default: // Send no parameters
+            return .requestPlain
         }
     }
     
@@ -67,6 +60,16 @@ extension WeatherService: TargetType {
     
     var headers: [String: String]? {
         return ["Content-type": "application/json"]
+    }
+    
+    public func clearCache(urlRequests: [URLRequest] = []) {
+        let provider = MoyaProvider<WeatherService>()
+        guard let urlCache = provider.manager.session.configuration.urlCache else { return }
+        if urlRequests.isEmpty {
+            urlCache.removeAllCachedResponses()
+        } else {
+            urlRequests.forEach { urlCache.removeCachedResponse(for: $0) }
+        }
     }
     
     private func _getLocalJson(name:String!) -> Data! {
