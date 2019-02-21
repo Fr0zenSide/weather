@@ -9,22 +9,32 @@
 import UIKit
 
 class MeteoDetailsViewController: UIViewController {
-
+    // MARK: - Variables
+    // Private variables
+    
+    // Public variables
+    
+    var data: Weather?
+    
+    // MARK: - Getter & Setter methods
+    
+    // MARK: - Constructors
+    /**
+     Method to create the manager of socket communications
+     
+     @param settings detail to launch the right sockets connection
+     @param delegate used to dispatch event from sockets activities
+     */
+    
+    // MARK: - Init behaviors
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    // MARK: - Public methods
+    
+    // MARK: - Private methods
 }

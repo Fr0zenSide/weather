@@ -10,6 +10,7 @@ import UIKit
 import Moya
 
 enum WeatherService {
+    case currentWeather(lat: Int, long: Int)
     case hello
 }
 
@@ -17,6 +18,8 @@ extension WeatherService: TargetType {
     var baseURL: URL { return URL(string: Constants.weatherServerUrl)! }
     var path: String {
         switch self {
+        case .currentWeather:
+            return "/weather"
         case .hello:
             return "/weather"
         }
@@ -24,13 +27,15 @@ extension WeatherService: TargetType {
     
     var method: Moya.Method {
         switch self {
-        case .hello:
+        case .currentWeather, .hello:
             return .get
         }
     }
     
     var parameters: [String: Any] {
         switch self {
+        case .currentWeather(let lat, let long):
+            return ["APPID": Constants.openweathermapToken, "lat": lat, "lon": long, "units": "metric"]
         case .hello:
              return ["APPID": Constants.openweathermapToken, "lat": 45, "lon": 1]
         default:
@@ -44,7 +49,7 @@ extension WeatherService: TargetType {
     
     var task: Task {
         switch self {
-        case .hello:
+        case .currentWeather(_, _), .hello:
             return .requestParameters(parameters: parameters, encoding: parameterEncoding)
         default: // Send no parameters
             return .requestPlain
@@ -53,6 +58,8 @@ extension WeatherService: TargetType {
     
     var sampleData: Data {
         switch self {
+        case .currentWeather:
+            return _getLocalJson(name: "currentWeather")
         case .hello:
             return _getLocalJson(name: "hello")
         }
