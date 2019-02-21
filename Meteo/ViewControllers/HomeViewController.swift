@@ -21,7 +21,6 @@ class HomeViewController: UIViewController {
     
     private var _locationManager = CLLocationManager()
     private var _userInformations: UserWeather!
-    private var _selectedLocation: Weather?
     private var _provider: MoyaProvider<WeatherService>!
     private let _refreshControl = UIRefreshControl()
     
@@ -29,6 +28,7 @@ class HomeViewController: UIViewController {
     // Public variables
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchButton: UIButton!
     
     // MARK: - Getter & Setter methods
     
@@ -65,6 +65,10 @@ class HomeViewController: UIViewController {
         _refreshControl.addTarget(self, action: #selector(_refreshData(_:)), for: .valueChanged)
 
         
+        let searchImg = UIImage.fontAwesomeIcon(name: .search, style: .solid, textColor: .darkGray, size: CGSize(width: 44, height: 44))
+        searchButton.setImage(searchImg, for: .normal)
+        
+        
         // Manage data
         _userInformations = UserWeather()
         _determineMyCurrentLocation()
@@ -83,10 +87,6 @@ class HomeViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
-        
-        if segue.identifier == "detailWeatherVC", let detailVC = segue.destination as? MeteoDetailsViewController {
-            detailVC.data = _selectedLocation
-        }
     }
     
     
@@ -178,8 +178,14 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let detailVC = storyboard?.instantiateViewController(withIdentifier: "detailWeatherVC") as? MeteoDetailsViewController else {
+            DDLogError("Can't find MeteoDetailsViewController")
+            return
+        }
+        
         let currentData = _userInformations.weathers[indexPath.row]
-        _selectedLocation = currentData
-        self.performSegue(withIdentifier: "detailWeatherVC", sender: self)
+        detailVC.data = currentData
+        
+        self.navigationController?.present(detailVC, animated: true, completion: nil)
     }
 }

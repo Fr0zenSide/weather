@@ -44,6 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Setup api Tokens in keychain
         Constants.registerOpenweathermapToken()
+        Constants.registerUnsplashToken()
         
         return true
     }

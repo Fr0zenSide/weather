@@ -25,6 +25,8 @@
 		803B01092216A03D0037397F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 803B01062216A03D0037397F /* Assets.xcassets */; };
 		8046BD8921F64CDF009AA8C9 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8046BD8821F64CDF009AA8C9 /* UIColor.swift */; };
 		8046BD8B21F64D19009AA8C9 /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8046BD8A21F64D19009AA8C9 /* CGFloat.swift */; };
+		805686F2221EDE1100DB9E2B /* UnsplashService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805686F1221EDE1100DB9E2B /* UnsplashService.swift */; };
+		805686F4221EE1AD00DB9E2B /* SearchPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805686F3221EE1AD00DB9E2B /* SearchPhoto.swift */; };
 		807C3B1C21FB19680066A8E0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807C3B1B21FB19680066A8E0 /* Constants.swift */; };
 		807C3B2021FB197D0066A8E0 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807C3B1D21FB197D0066A8E0 /* UIView.swift */; };
 		807C3B2121FB197D0066A8E0 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807C3B1E21FB197D0066A8E0 /* UIImageView.swift */; };
@@ -92,6 +94,8 @@
 		803B01062216A03D0037397F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Meteo/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		8046BD8821F64CDF009AA8C9 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		8046BD8A21F64D19009AA8C9 /* CGFloat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloat.swift; sourceTree = "<group>"; };
+		805686F1221EDE1100DB9E2B /* UnsplashService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnsplashService.swift; sourceTree = "<group>"; };
+		805686F3221EE1AD00DB9E2B /* SearchPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPhoto.swift; sourceTree = "<group>"; };
 		807C3B1B21FB19680066A8E0 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		807C3B1D21FB197D0066A8E0 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		807C3B1E21FB197D0066A8E0 /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
@@ -272,6 +276,7 @@
 		8046BD7B21F63E23009AA8C9 /* Networks */ = {
 			isa = PBXGroup;
 			children = (
+				805686F1221EDE1100DB9E2B /* UnsplashService.swift */,
 				8016FE222216CA1A009AABC4 /* WeatherService.swift */,
 				8016FE2622199360009AABC4 /* NetworkDataCachingPlugin.swift */,
 			);
@@ -284,6 +289,7 @@
 				807C3B3221FB1FAA0066A8E0 /* AbstractModel.swift */,
 				8016FE2422172887009AABC4 /* Weather.swift */,
 				80B41AA8221B1678000F6F73 /* UserWeather.swift */,
+				805686F3221EE1AD00DB9E2B /* SearchPhoto.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -649,6 +655,7 @@
 				807C3B2F21FB1A020066A8E0 /* SwipeInteractionController.swift in Sources */,
 				8046BD8B21F64D19009AA8C9 /* CGFloat.swift in Sources */,
 				8016FE1F2216B642009AABC4 /* MeteoDetailsViewController.swift in Sources */,
+				805686F4221EE1AD00DB9E2B /* SearchPhoto.swift in Sources */,
 				807C3B2021FB197D0066A8E0 /* UIView.swift in Sources */,
 				807C3B3521FB1FAA0066A8E0 /* AbstractModel.swift in Sources */,
 				80B41AAF221DC116000F6F73 /* WeatherTableViewCell.swift in Sources */,
@@ -663,6 +670,7 @@
 				80B41AAD221DA98D000F6F73 /* CLLocation.swift in Sources */,
 				8016FE2522172887009AABC4 /* Weather.swift in Sources */,
 				807C3B1C21FB19680066A8E0 /* Constants.swift in Sources */,
+				805686F2221EDE1100DB9E2B /* UnsplashService.swift in Sources */,
 				8016FE212216B655009AABC4 /* SearchLocationViewController.swift in Sources */,
 				8046BD8921F64CDF009AA8C9 /* UIColor.swift in Sources */,
 				80B41AA9221B1678000F6F73 /* UserWeather.swift in Sources */,

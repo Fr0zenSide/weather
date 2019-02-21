@@ -117,10 +117,10 @@ class WeatherElement: Codable {
 }
 
 class Wind: Codable {
-    let speed: Double
-    let deg: Int
+    let speed: Double?
+    let deg: Int?
     
-    init(speed: Double, deg: Int) {
+    init(speed: Double?, deg: Int?) {
         self.speed = speed
         self.deg = deg
     }

@@ -34,6 +34,19 @@ class Constants {
         _ = Constants.register(token: "", for: _openweathermapTokenKey)
     }
     
+    static var unsplashServerUrl = "https://api.unsplash.com"
+    // Mark: - Manage Unsplash Token behavior
+    static private var _unsplashTokenKey = "unsplashToken"
+    static var unsplashToken: String {
+        let keychain = getKeychain()
+        if let token = keychain[_unsplashTokenKey] { return token }
+        return ""
+    }
+    
+    static func registerUnsplashToken() {
+        _ = Constants.register(token: "", for: _unsplashTokenKey)
+    }
+    
     static var locale = "fr"
     static var country = "fr"
     
@@ -70,6 +83,7 @@ class Constants {
     static func description() -> String {
         let desc = """
         \(_openweathermapTokenKey): \(Constants.openweathermapToken),
+        \(_unsplashTokenKey): \(Constants.unsplashToken),
         locale: \(Constants.locale),
         country: \(Constants.country)
         """

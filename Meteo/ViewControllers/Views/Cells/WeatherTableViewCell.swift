@@ -17,7 +17,19 @@ class WeatherTableViewCell: UITableViewCell {
     
     // Public variables
     
-    var data: Weather?
+    var data: Weather? {
+        didSet {
+            if data == nil {
+                imageView?.image = UIImage.fontAwesomeIcon(name: .featherAlt, style: .solid, textColor: .lightGray, size: CGSize(width: 44, height: 44))
+                textLabel?.text = "-°"
+            } else {
+                guard let iconName = data?.weather.first?.icon else { DDLogError("Need more informations"); return }
+                _loadImage(with: iconName)
+                guard let temp = data?.main.temp else { DDLogError("Need more informations"); return }
+                textLabel?.text = "\(temp)°"
+            }
+        }
+    }
     
     // MARK: - Getter & Setter methods
     
@@ -29,7 +41,7 @@ class WeatherTableViewCell: UITableViewCell {
         super.awakeFromNib()
         
         // Initialization code
-        self.imageView?.contentMode = .scaleAspectFit // .scaleAspectFill
+        self.imageView?.contentMode = .scaleAspectFit
     }
     
     // MARK: - Public methods
@@ -37,19 +49,10 @@ class WeatherTableViewCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         data = nil
-        imageView?.image = UIImage.fontAwesomeIcon(name: .featherAlt, style: .brands, textColor: .lightGray, size: CGSize(width: 80, height: 80))//feather-alt
-        textLabel?.text = ""
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
-        if let weatherData = data {
-            textLabel?.text = "\(weatherData.main.temp)°"
-            
-            guard let iconName = data?.weather.first?.icon else { DDLogError("Need more informations"); return }
-            _loadImage(with: iconName)
-        }
     }
     
     // MARK: - Private methods
