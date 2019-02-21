@@ -59,7 +59,7 @@ class FlipPresentAnimationController: NSObject, UIViewControllerAnimatedTransiti
         let finalFrame = transitionContext.finalFrame(for: toVC)
         
         snapshot.frame = _originFrame
-        snapshot.layer.cornerRadius = AppPreviewCollectionViewCell.cellCornerRadius
+        snapshot.layer.cornerRadius = 2.0
         snapshot.layer.masksToBounds = true
         
         containerView.addSubview(toVC.view)

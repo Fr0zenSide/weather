@@ -59,7 +59,7 @@ class FlipDismissAnimationController: NSObject, UIViewControllerAnimatedTransiti
                 return
         }
         
-        snapshot.layer.cornerRadius = AppPreviewCollectionViewCell.cellCornerRadius
+        snapshot.layer.cornerRadius = 2.0
         snapshot.layer.masksToBounds = true
         
         let containerView = transitionContext.containerView
